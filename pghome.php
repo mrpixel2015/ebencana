@@ -26,7 +26,8 @@
       </div>
 </div>
 <div class="container">
-  
+  	
+    <h1>INI PAGE HOME DAN MAIN</h1>
   
      <hr>
 
