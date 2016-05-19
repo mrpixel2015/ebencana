@@ -68,7 +68,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Portal eBENCANA</a>
+          <a class="navbar-brand" href="<?php echo $_SERVER['PHP_SELF']."?pg=utama"; ?>">Portal eBENCANA</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             
@@ -80,14 +80,25 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Agihan Bantuan<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="<?php echo $_SERVER['PHP_SELF']."?pg=agihan"; ?>">Permohonan Bantuan</a></li>
+                <li><a href="<?php echo $_SERVER['PHP_SELF']."?pg=admin"; ?>">Log Masuk Pentadbir</a></li>
               </ul>
             </li>
 
             <li><a href="#contact">Hubungi Kami</a></li>
           </ul>
+          <?php
+		  		
+				if(isset($_SESSION['ISLOGIN'])){
+		  
+		  ?>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar-static-top/">Log Masuk</a></li>
+            <li><a href="#">Log Keluar</a></li>
           </ul>
+          <?php
+		  
+				}
+		  
+		  ?>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
@@ -95,13 +106,15 @@
     <?php
 
 
-          if($page == "agihan"){
-            include("pgagihan.php");
-          }else if($page == "utama"){
-            include("pghome.php");
-          }else{
-              include("pghome.php");
-          }
+          	if($page == "agihan"){
+            	include("pgagihan.php");
+          	}else if($page == "utama"){
+            	include("pghome.php");
+			}else if($page == "admin"){
+            	include("pgadmin.php");
+          	}else{
+              	include("pghome.php");
+          	}
 
 
 
