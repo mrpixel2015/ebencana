@@ -50,8 +50,7 @@
 	
 			if($subpg == "subhome"){
 				include("subpghome.php");
-			}else if($subpg == "subagihan
-			"){
+			}else if($subpg == "subagihan"){
 				include("subpgagihan.php");
 			}else{
 				include("subpghome.php");	

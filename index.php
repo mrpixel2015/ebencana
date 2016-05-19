@@ -74,7 +74,7 @@
             
           <ul class="nav navbar-nav">
             <li class="active"><a href="<?php echo $_SERVER['PHP_SELF']."?pg=utama"; ?>">Laman Utama</a></li>
-            <li><a href="#about">Jenis Bantuan</a></li>
+            <li><a href="<?php echo $_SERVER['PHP_SELF']."?pg=type"; ?>">Jenis Bantuan</a></li>
             <!--<li><a href="<?php //echo $_SERVER['PHP_SELF']."?pg=agihan"; ?>">Agihan Bantuan</a></li>-->
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Agihan Bantuan<span class="caret"></span></a>
@@ -84,7 +84,7 @@
               </ul>
             </li>
 
-            <li><a href="#contact">Hubungi Kami</a></li>
+            <li><a href="<?php echo $_SERVER['PHP_SELF']."?pg=contact"; ?>">Hubungi Kami</a></li>
           </ul>
           <?php
 		  		
@@ -112,6 +112,10 @@
             	include("pghome.php");
 			}else if($page == "admin"){
             	include("pgadmin.php");
+			}else if($page == "type"){
+            	include("pgjnsbantuan.php");
+			}else if($page == "contact"){
+            	include("pgcontact.php");
           	}else{
               	include("pghome.php");
           	}
